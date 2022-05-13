@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 
 const NoteState = (props)=>{
-    const host = "http://localhost:1352/";
+    // const host = "http://localhost:1352/";
     const [note, setNote] = useState([]);
 
     const fetchNotes = async()=>{
-      const url = `${host}api/notes/fetchnotes`;
+      const url = `/api/notes/fetchnotes`;
       const response = await fetch(url, {
         method:"GET",
         headers:{
@@ -20,7 +20,7 @@ const NoteState = (props)=>{
     }
 
     const addNote = async (title, description, tag)=>{
-      const url = `${host}api/notes/addnote`;
+      const url = `/api/notes/addnote`;
       if(tag===""){
         tag = undefined
       }
@@ -37,7 +37,7 @@ const NoteState = (props)=>{
       props.showAlert("Note added", "success");
     }
     const deleteNote = async (id)=>{
-      const url = `${host}api/notes/deletenote/${id}`;
+      const url = `/api/notes/deletenote/${id}`;
       const response = await fetch(url, {
         method:"DELETE",
         headers:{
@@ -53,7 +53,7 @@ const NoteState = (props)=>{
     }
 
     const editNote = async (id, title, description, tag)=>{
-      const url = `${host}api/notes/updatenote/${id}`;
+      const url = `/api/notes/updatenote/${id}`;
       const response = await fetch(url, {
         method:"PUT",
         headers:{
