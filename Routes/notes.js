@@ -10,7 +10,7 @@ router.get('/fetchnotes', fetchUser, async(req, res)=>{
         res.status(200).json(notes)
     } catch (error) {
         console.log(error);
-        res.status(500).send("Internal server error");
+        res.set('Cache-control', no-store).status(500).send("Internal server error");
     }
 });
 
