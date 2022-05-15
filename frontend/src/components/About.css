@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.mainContainer{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+}
+.left{
+    width: 50%;
+    background-color: #eeeeee;
+}
+.right{
+    width: 50%;
+    background-color: rgb(50, 115, 255);
+}
+.contentContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 80%;
+    height: 72%;
+    box-shadow: -3px 3px 13px #6c6969;
+}
+.contentContainer > h4{
+    text-align: center;
+    padding: 1vmax;
+    padding-bottom: 0.1vmax;
+    width: 16%;
+    margin: auto;
+    border-bottom: 1px solid #919191;
+    color: #ff6c6c;
+    font-size: 2.2vmax;
+}
+.forFlex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.details, .contactInfo{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    padding: 2vmax;
+}
+.details > img{
+    width: 12vmax;
+    height: 14vmax;
+    border-radius: 50%;
+}
+.name{
+    padding: 1vmax;
+    color: #ff2323;
+    font-size: 2vmax;
+}
+.desc{
+    text-align: center;
+}
+.line{
+    border-left: 1px solid rgb(117, 117, 117);
+    height: 80%;
+    margin-top: 1vmax;
+}
+.contactInfo{
+    margin-top: 4vmax;
+    justify-content: flex-start;
+}
+.contactInfo > div{
+    padding: 1vmax;
+    display: flex;
+    align-items: center;
+}
+.contactInfo > div > a{
+    padding: 1vmax;
+    text-decoration: none;
+    font: 400 2vmax Roboto;
+    transition: 0.3s all;
+}
+.contactInfo > div > a:hover{
+    background-color: rgb(238, 238, 238);
+}
+.fb-insta-logo{
+    width: 3vmax;
+}
+@media screen and (max-width : 600px) {
+    .left, .right{
+        display: none;
+    }
+    .contentContainer{
+        position: unset;
+        height: 70vh;
+        transform: none;
+        width: 100vw;
+        box-shadow: none;
+    }
+    .forFlex{
+        flex-direction: column;
+    }
+    .contentContainer > h4{
+        width: 31vw;
+        padding-top: 3vw;
+        font-size: 6vw;
+    }
+    .details, .contactInfo{
+        width: 100%;
+    }
+    .line{
+        border-bottom: 1px solid rgb(117, 117, 117);
+        width: 100vw;
+        height: 0;
+        margin-top: 0;
+    }
+    .details > img{
+        width: 40vw;
+        height: 46vw;
+    }
+    .name{
+        font-size: 6vw;
+    }
+    .fb-insta-logo{
+        width: 10vw;
+    }
+    .contactInfo > div{
+        padding: 3vw;
+    }
+    .contactInfo > div > a{
+        font-size: 5vw;
+        font-weight: bold;
+    }
+}
